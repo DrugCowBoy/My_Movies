@@ -59,6 +59,7 @@ public class DetailActivity extends AppCompatActivity {
         inflater.inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
     // метод для нажатия по элементам меню
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

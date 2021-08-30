@@ -66,7 +66,6 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
         Movie movie = movies.get(position);
         // загружаем картинку с помощью библиотеки Picasso; указываем адрес, откуда скачиваем картинку, и место в макете, куда устанавливаем её
         Picasso.get().load(movie.getPosterPath()).into(holder.imageViewMovie);
-        // если позиция ViewHolder'а будет близка к концу списка, то выполним метод onReachEnd()
     }
 
     @Override

@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private MainViewModel viewModel;
 
     private int page = 1;// начало загрузки фильмов происходит с 1-ой страницы
-    private boolean[] isLoading = {false};
-    private boolean isCheckedSwitch;
+    private boolean[] isLoading = {false};// происходит ли загрузка ответа с сервера или нет
+    private boolean isCheckedSwitch;// переменная для положения переключателя
 
     private String lang;// переменная для хранения языка на устройстве пользователя
 
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
     // метод для нажатия по элементам меню
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

@@ -24,6 +24,7 @@ public class Movie implements Parcelable {
     private String bigPosterPath;
     private String releaseDate;
 
+    // !!! Чтобы объект Movie можно положить в интент !!!
     protected Movie(Parcel in) {
         uniqueId = in.readInt();
         id = in.readInt();
@@ -69,8 +70,9 @@ public class Movie implements Parcelable {
         dest.writeString(bigPosterPath);
         dest.writeString(releaseDate);
     }
+    // !!! Чтобы объект Movie можно положить в интент !!!
 
-    // конструктор класса
+    // конструктор Movie
     public Movie(int uniqueId,int id, String title, String originalTitle, int voteCount, double voteAverage, String overview, String backdropPath, String posterPath, String bigPosterPath, String releaseDate) {
         this.uniqueId = uniqueId;
         this.id = id;
@@ -85,6 +87,7 @@ public class Movie implements Parcelable {
         this.releaseDate = releaseDate;
     }
 
+    // конструктор Movie без поля uniqueId, чтобы можно было создать его вручную
     @Ignore
     public Movie(int id, String title, String originalTitle, int voteCount, double voteAverage, String overview, String backdropPath, String posterPath, String bigPosterPath, String releaseDate) {
         this.id = id;
